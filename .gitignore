@@ -1,0 +1,7 @@
+.env
+public/uploads/products/*
+public/uploads/avatars/*
+!public/uploads/products/.gitkeep
+!public/uploads/avatars/.gitkeep
+.vscode/
+.DS_Store
