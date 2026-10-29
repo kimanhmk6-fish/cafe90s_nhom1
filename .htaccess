@@ -1,0 +1,4 @@
+# Cho phép mở dự án ngay tại http://localhost/cafe90snhom1/ (XAMPP) mà không cần gõ /public
+RewriteEngine On
+RewriteRule ^$ public/ [L]
+RewriteRule ^(.*)$ public/$1 [L]

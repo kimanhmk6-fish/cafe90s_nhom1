@@ -1,4 +1,14 @@
 <?php
-// Front Controller duy nhất của ứng dụng Góc Cà Phê 90s.
-// Mọi request đều đi qua file này và được Router (app/Core) điều hướng.
-// Phần Core (Router, Database, BaseModel...) được triển khai ở các bước tiếp theo.
+declare(strict_types=1);
+
+define('BASE_PATH', dirname(__DIR__));
+
+// Khi chạy bằng "php -S localhost:8000 public/index.php": trả file tĩnh trực tiếp
+if (PHP_SAPI === 'cli-server') {
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($path !== '/' && is_file(__DIR__ . $path)) {
+        return false;
+    }
+}
+
+require BASE_PATH . '/app/bootstrap.php';
