@@ -1,0 +1,3 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Không tìm thấy trang</title>
+<link rel="stylesheet" href="<?= asset('css/app.css') ?>"><link rel="stylesheet" href="<?= asset('css/site.css') ?>"></head>
+<body class="site error-page"><main><h1>404</h1><p>Trang bạn tìm không tồn tại hoặc đã được dời đi.</p><a class="btn btn-dark" href="<?= url('/') ?>">Về trang chủ</a></main></body></html>
