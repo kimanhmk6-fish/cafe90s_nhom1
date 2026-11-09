@@ -47,10 +47,18 @@ function request_path(): string
 {
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
     $base = base_url();
+
     if ($base !== '' && str_starts_with($path, $base)) {
         $path = substr($path, strlen($base));
     }
+
     $path = preg_replace('#^/public(?=/|$)#', '', $path);
+
+    // Truy cập index.php thì xem như trang chủ
+    if ($path === '/index.php' || $path === '/index.php/') {
+        $path = '/';
+    }
+
     return '/' . trim($path, '/');
 }
 

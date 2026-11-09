@@ -51,6 +51,7 @@ try {
 } catch (Throwable $e) {
     http_response_code(500);
     error_log($e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine());
+
     if (env('APP_DEBUG') === 'true') {
         echo '<pre>' . e((string) $e) . '</pre>';
     } else {
