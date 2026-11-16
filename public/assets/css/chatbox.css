@@ -1,0 +1,44 @@
+/* ===== Chat box hỗ trợ (góc phải dưới) ===== */
+.cb { position: fixed; right: 18px; bottom: 18px; z-index: 1200; font-family: inherit; }
+.cb-toggle { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px;
+  border: 0; border-radius: 999px; background: #2f1810; color: #fcf7f0; cursor: pointer;
+  font-size: 15px; font-weight: 600; box-shadow: 0 8px 24px rgba(47,24,16,.35); }
+.cb-toggle:hover { background: #3b2a1f; }
+.cb-panel { position: absolute; right: 0; bottom: 60px; width: 350px; max-width: calc(100vw - 24px);
+  max-height: min(560px, calc(100vh - 110px)); display: flex; flex-direction: column;
+  background: #fcf7f0; border: 1px solid #cdbca9; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 18px 48px rgba(47,24,16,.35); }
+.cb-panel[hidden] { display: none; }
+.cb-head { display: flex; justify-content: space-between; align-items: flex-start;
+  background: #2f1810; color: #fcf7f0; padding: 12px 14px; }
+.cb-head strong { display: block; font-size: 16px; }
+.cb-head small { opacity: .8; font-size: 12px; }
+.cb-close { background: none; border: 0; color: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
+.cb-tabs { display: flex; background: #f6ebdc; }
+.cb-tab { flex: 1; padding: 10px 6px; background: none; border: 0; border-bottom: 2px solid transparent;
+  font-size: 14px; font-weight: 600; color: #3b2a1f; cursor: pointer; }
+.cb-tab.is-active { border-bottom-color: #2f1810; background: #fcf7f0; }
+.cb-page { display: flex; flex-direction: column; min-height: 0; }
+.cb-page[hidden] { display: none; }
+.cb-log { padding: 12px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; min-height: 180px; }
+.cb-msg { display: flex; }
+.cb-msg.me { justify-content: flex-end; }
+.cb-bubble { max-width: 85%; padding: 8px 11px; border-radius: 12px; font-size: 14px; line-height: 1.45;
+  background: #f3e7d6; color: #2f1810; white-space: pre-wrap; word-break: break-word; }
+.cb-msg.me .cb-bubble { background: #2f1810; color: #fcf7f0; }
+.cb-link { color: inherit; font-weight: 700; text-decoration: underline; }
+.cb-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 10px; }
+.cb-chip { padding: 5px 10px; border: 1px solid #cdbca9; border-radius: 999px; background: #fff;
+  font-size: 12.5px; cursor: pointer; color: #3b2a1f; }
+.cb-chip:hover { background: #f6ebdc; }
+.cb-ask { display: flex; gap: 6px; padding: 10px 12px; border-top: 1px solid #f1e4d3; background: #fff; }
+.cb-ask input { flex: 1; min-width: 0; padding: 9px 10px; border: 1px solid #cdbca9; border-radius: 10px; font-size: 14px; }
+.cb-ask button, .cb-send { padding: 9px 14px; border: 0; border-radius: 10px; background: #2f1810;
+  color: #fcf7f0; font-weight: 600; cursor: pointer; font-size: 14px; }
+.cb-form { padding: 12px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
+.cb-form label { display: flex; flex-direction: column; gap: 4px; font-size: 13.5px; font-weight: 600; color: #3b2a1f; }
+.cb-form input, .cb-form textarea { padding: 9px 10px; border: 1px solid #cdbca9; border-radius: 10px;
+  font-size: 14px; font-weight: 400; font-family: inherit; background: #fff; }
+.cb-note { margin: 0; font-size: 12.5px; color: #6b5847; }
+.cb-note.ok { color: #2e7d32; font-weight: 600; }
+.cb-note.err { color: #b3261e; font-weight: 600; }
