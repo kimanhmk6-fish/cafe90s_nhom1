@@ -5,6 +5,7 @@
 $router->get('/', 'Client\HomeController@index');
 $router->get('/ve-quan', 'Client\HomeController@about');
 $router->get('/menu', 'Client\ProductController@menu');
+$router->post('/ho-tro/gui', 'Client\SupportController@send');
 
 $router->get('/dang-nhap', 'Client\AuthController@showLogin', 'guest');
 $router->post('/dang-nhap', 'Client\AuthController@login', 'guest');
@@ -60,3 +61,6 @@ $router->post('/admin/orders/{id}/payment', 'Admin\OrderController@reconcile', '
 $router->get('/admin/users', 'Admin\UserController@index', 'admin');
 $router->post('/admin/users/{id}/toggle', 'Admin\UserController@toggleActive', 'admin');
 $router->post('/admin/users/{id}/promote', 'Admin\UserController@promote', 'admin');
+
+$router->get('/admin/support', 'Admin\SupportController@index', 'admin');
+$router->post('/admin/support/{id}/read', 'Admin\SupportController@markRead', 'admin');
