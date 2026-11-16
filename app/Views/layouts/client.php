@@ -18,6 +18,7 @@ $pageTitle = ($title ?? '') ? $title . ' · Góc Cà Phê 90s' : 'Góc Cà Phê 
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= asset('css/app.css') ?>">
 <link rel="stylesheet" href="<?= asset('css/site.css') ?>">
+<link rel="stylesheet" href="<?= asset('css/chatbox.css') ?>">
 </head>
 <body class="site" data-base="<?= e(base_url()) ?>">
 <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
@@ -115,6 +116,8 @@ $pageTitle = ($title ?? '') ? $title . ' · Góc Cà Phê 90s' : 'Góc Cà Phê 
   </div>
 </dialog>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<?php require BASE_PATH . '/app/Views/partials/chatbox.php'; ?>
 <script src="<?= asset('js/app.js') ?>" defer></script>
+<script src="<?= asset('js/chatbox.js') ?>" defer></script>
 </body>
 </html>

@@ -7,6 +7,7 @@ $menu = [
   '/admin/categories' => ['Danh mục', '<path d="M12 3 3 8l9 5 9-5zM3 13l9 5 9-5"/>'],
   '/admin/orders' => ['Đơn hàng', '<path d="M7 4h10v16H7zM10 9h4M10 13h4"/>'],
   '/admin/users' => ['Người dùng', '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .6 3.3 2.3 3.5 5"/>'],
+  '/admin/support' => ['Hộp thư hỗ trợ', '<path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.2 0-2.4-.25-3.4-.7L3 21l1.7-6.1A8.5 8.5 0 1 1 21 11.5z"/>'],
 ];
 ?>
 <!doctype html>

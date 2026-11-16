@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Patrick+Hand&display=swap');
 /* =========================================================
    Góc Cà Phê 90s — nền tảng dùng chung (Client + Admin)
    Bảng màu lấy theo bản demo: kem – nâu cà phê – caramel
@@ -23,10 +24,10 @@
   --radius: 14px;
   --radius-sm: 9px;
   --shadow: 0 1px 2px rgba(42, 21, 13, .06), 0 8px 24px rgba(42, 21, 13, .07);
-  --font-body: "Inter", "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-script: "Caveat", "Segoe Script", cursive;
-}
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "DM Sans", sans-serif;
+  --font-script: "Patrick Hand", cursive;
+  }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
